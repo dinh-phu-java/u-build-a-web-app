@@ -21,7 +21,6 @@ public class CustomerDAOImpl implements ICustomerDAO{
 //private SessionFactory sessionFactory;
 
     @Override
-    @Transactional
     public List<Customer> getCustomers() {
         SessionFactory sessionFactory=new Configuration().configure().addAnnotatedClass(Customer.class).buildSessionFactory();
 
