@@ -8,4 +8,5 @@ public interface ICustomerDAO {
 
     public List<Customer> getCustomers();
 
+    public void saveCustomer(Customer customer);
 }

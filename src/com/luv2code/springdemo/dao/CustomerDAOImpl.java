@@ -28,7 +28,8 @@ public class CustomerDAOImpl implements ICustomerDAO{
 
         session.beginTransaction();
 
-        Query<Customer> theQuery=session.createQuery("from Customer",
+        Query<Customer> theQuery=session.createQuery("from Customer " +
+                        "order by lastName",
                 Customer.class);
 
         List<Customer> customers=theQuery.getResultList();
@@ -38,6 +39,22 @@ public class CustomerDAOImpl implements ICustomerDAO{
         session.close();
         sessionFactory.close();
         return customers;
+    }
+
+    @Override
+    public void saveCustomer(Customer customer) {
+        SessionFactory sessionFactory=new Configuration().configure().addAnnotatedClass(Customer.class).buildSessionFactory();
+
+        Session session=sessionFactory.getCurrentSession();
+
+        session.beginTransaction();
+
+        session.save(customer);
+
+        session.getTransaction().commit();
+
+        session.close();
+        sessionFactory.close();
     }
 
     public static void main(String[] args) {
