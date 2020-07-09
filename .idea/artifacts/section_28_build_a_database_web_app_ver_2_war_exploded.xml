@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="section 28 build a database web app ver 2:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/section_28_build_a_database_web_app_ver_2_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="section 28 build a database web app ver 2/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="section 28 build a database web app ver 2" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
